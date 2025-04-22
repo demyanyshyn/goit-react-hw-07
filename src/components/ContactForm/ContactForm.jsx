@@ -5,7 +5,7 @@ import { useId } from 'react';
 import ContactList from '../ContactList/ContactList';
 import Button from '../Button/Button';
 import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/contactsSlice';
+import { addContact } from '../../redux/contactsOps';
 
 const initialValues = {
     name: '',
@@ -19,7 +19,6 @@ const ContactForm = ({}) => {
 
     const handleSubmit = ({ name, number }, actions) => {
         const newContact = {
-            id: crypto.randomUUID(),
             name,
             number,
         };
